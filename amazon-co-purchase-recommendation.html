@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amazon co-purchase recommendation system built with PySpark ALS, collaborative filtering, Power BI, and Spark Web UI analysis.">
+    <title>Amazon Co-Purchase Recommendation System | Cyb3rZ3d</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo"><a href="index.html">CYB3RZ3D</a></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="https://github.com/Cyb3rZ3d">GitHub</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+<section class="project-hero">
+    <div class="container">
+        <p class="eyebrow">Big Data Analytics • Machine Learning • Recommendation Systems</p>
+        <h1>Amazon Co-Purchase Recommendation System</h1>
+        <p class="project-lead">
+            A CSEC 5311 semester project that transforms Amazon co-purchasing
+            relationships into implicit interactions, trains a PySpark ALS
+            collaborative-filtering model, and presents recommendation output
+            through Python visualizations, Power BI, and the Spark Web UI.
+        </p>
+        <div class="project-actions">
+            <a class="button" href="https://github.com/Cyb3rZ3d/WSL_Ubuntu_20.04">View Project Repository</a>
+            <a class="button secondary" href="projects.html">All Projects</a>
+        </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container">
+        <div class="project-summary-grid">
+            <article class="card">
+                <h2>Objective</h2>
+                <p>Build a scalable recommendation pipeline from Amazon product metadata and co-purchase relationships.</p>
+            </article>
+            <article class="card">
+                <h2>Model</h2>
+                <p>PySpark Alternating Least Squares collaborative filtering using implicit interactions.</p>
+            </article>
+            <article class="card">
+                <h2>Recorded Result</h2>
+                <p>RMSE of 0.3904 on the original 20% held-out test set.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container">
+        <h2 class="section-title">Established Project Workflow</h2>
+        <ol class="workflow-list">
+            <li><strong>Parse</strong><span>Extract ASIN, title, product group, and similar-product relationships from the semi-structured Amazon metadata.</span></li>
+            <li><strong>Transform</strong><span>Map ASIN values to integers and represent co-purchase links as implicit interactions with a rating of 1.0.</span></li>
+            <li><strong>Split</strong><span>Create an 80% training and 20% testing split for the evaluated implementation.</span></li>
+            <li><strong>Train</strong><span>Fit a PySpark ALS model with 10 iterations, regularization of 0.1, and cold-start handling.</span></li>
+            <li><strong>Evaluate</strong><span>Calculate RMSE on held-out predictions and preserve the recorded score of 0.3904.</span></li>
+            <li><strong>Present</strong><span>Export 100 recommendation rows and analyze them with Matplotlib, Seaborn, Power BI, and Spark Web UI.</span></li>
+        </ol>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container">
+        <div class="two-column">
+            <div>
+                <h2 class="section-title">Implemented Analysis</h2>
+                <ul class="detail-list">
+                    <li>Amazon metadata parsing with regular expressions</li>
+                    <li>ASIN-to-integer identifier mapping</li>
+                    <li>Implicit co-purchase interaction matrix</li>
+                    <li>Top-ten recommendations for ten users</li>
+                    <li>Top recommended-products bar chart</li>
+                    <li>User-item prediction heatmap</li>
+                    <li>Interactive Power BI dashboard</li>
+                    <li>Spark jobs, stages, storage, environment, executors, and SQL monitoring</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="section-title">Project Boundaries</h2>
+                <ul class="detail-list">
+                    <li>The source code and outputs remain in their original course-project state.</li>
+                    <li>The scripts use the original WSL paths and require the SNAP Amazon metadata file.</li>
+                    <li>The RMSE is transcribed from the submitted report, not a newly reproduced benchmark.</li>
+                    <li>The uploaded Power BI artifact confirms the submitted dashboard work.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container">
+        <h2 class="section-title">Technologies and Skills</h2>
+        <div class="tag-list">
+            <span>Python 3.10</span><span>PySpark</span><span>Apache Spark</span>
+            <span>ALS</span><span>Collaborative Filtering</span><span>Implicit Feedback</span>
+            <span>pandas</span><span>Matplotlib</span><span>Seaborn</span>
+            <span>Power BI</span><span>Spark Web UI</span><span>WSL Ubuntu</span>
+            <span>VS Code</span><span>Big Data Analytics</span><span>Recommendation Systems</span>
+        </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container">
+        <h2 class="section-title">Selected Project Evidence</h2>
+        <p class="section-intro">Six original figures from the submitted report highlight the development environment, model output, visualizations, Power BI dashboard, and Spark monitoring. All 15 report figures remain in the project repository.</p>
+        <p><a class="text-link" href="https://github.com/Cyb3rZ3d/WSL_Ubuntu_20.04/tree/main/report-evidence">View all 15 report figures</a></p>
+        <div class="evidence-grid">
+            <figure><img loading="lazy" src="images/amazon-co-purchase/01-development-environment.png" alt="VS Code and WSL Ubuntu project environment"><figcaption>01 • WSL and VS Code development environment</figcaption></figure>
+            <figure><img loading="lazy" src="images/amazon-co-purchase/06-top-recommendations.png" alt="Top ten recommended Amazon products bar chart"><figcaption>06 • Top recommended products</figcaption></figure>
+            <figure><img loading="lazy" src="images/amazon-co-purchase/07-user-item-heatmap.png" alt="User-item recommendation heatmap"><figcaption>07 • User-item recommendation heatmap</figcaption></figure>
+            <figure><img loading="lazy" src="images/amazon-co-purchase/09-power-bi-dashboard.png" alt="Power BI recommendation dashboard"><figcaption>09 • Power BI recommendation dashboard</figcaption></figure>
+            <figure><img loading="lazy" src="images/amazon-co-purchase/10-spark-jobs.png" alt="Apache Spark Web UI jobs page"><figcaption>10 • Spark jobs monitoring</figcaption></figure>
+            <figure><img loading="lazy" src="images/amazon-co-purchase/14-spark-executors.png" alt="Apache Spark Web UI executors page"><figcaption>14 • Spark executor monitoring</figcaption></figure>
+        </div>
+    </div>
+</section>
+
+<section class="project-section project-cta">
+    <div class="container">
+        <h2>Explore the Existing Work</h2>
+        <p>The original repository contains the PySpark implementations, requirements, recommendation CSV, generated charts, and project plan.</p>
+        <div class="project-actions project-actions-center">
+            <a class="button" href="https://github.com/Cyb3rZ3d/WSL_Ubuntu_20.04">Open Project Repository</a>
+            <a class="text-link" href="https://github.com/Cyb3rZ3d/MS-CSEC/tree/main/5_Spring_2025_5th_Semester/CSEC%205311%20_%20Big%20Data%20Analysis%20and%20Security">Open CSEC 5311 Course Folder</a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer><div class="container"><p>Cyb3rZ3d Cybersecurity Portfolio</p></div></footer>
+</body>
+</html>
