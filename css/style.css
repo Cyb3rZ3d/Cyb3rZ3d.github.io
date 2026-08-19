@@ -171,3 +171,230 @@ footer {
     font-size: 0.9rem;
     color: #58a6ff !important;
 }
+
+
+/* Project detail pages */
+
+.card .project-actions {
+    margin-top: 22px;
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.project-actions .button {
+    margin-right: 0;
+}
+
+.text-link {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.project-hero {
+    padding: 90px 0 60px;
+    background: linear-gradient(180deg, #0d1117 0%, #0b0f14 100%);
+}
+
+.project-hero h1 {
+    max-width: 850px;
+    margin: 10px 0 20px;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    line-height: 1.08;
+}
+
+.eyebrow {
+    color: #58a6ff;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.project-lead {
+    max-width: 820px;
+    margin-bottom: 30px;
+    color: #8b949e;
+    font-size: 1.15rem;
+}
+
+.project-section {
+    padding: 45px 0;
+}
+
+.project-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-summary-grid h2 {
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.architecture-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: stretch;
+    gap: 12px;
+}
+
+.flow-node {
+    display: flex;
+    min-height: 145px;
+    padding: 22px;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    background: #161b22;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flow-node span {
+    color: #58a6ff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.flow-node strong {
+    margin: 7px 0;
+}
+
+.flow-node small {
+    color: #8b949e;
+}
+
+.flow-arrow {
+    display: flex;
+    align-items: center;
+    color: #58a6ff;
+    font-size: 1.5rem;
+}
+
+.workflow-list {
+    display: grid;
+    list-style: none;
+    counter-reset: workflow;
+    gap: 16px;
+}
+
+.workflow-list li {
+    display: grid;
+    grid-template-columns: minmax(170px, 0.35fr) 1fr;
+    gap: 20px;
+    padding: 20px;
+    border-left: 3px solid #238636;
+    background: #161b22;
+    counter-increment: workflow;
+}
+
+.workflow-list strong::before {
+    content: "0" counter(workflow) " ";
+    margin-right: 8px;
+    color: #58a6ff;
+}
+
+.workflow-list span {
+    color: #8b949e;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.detail-list {
+    display: grid;
+    padding-left: 22px;
+    color: #8b949e;
+    gap: 12px;
+}
+
+.technique-list {
+    display: grid;
+    gap: 12px;
+}
+
+.technique-list div {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 15px;
+    padding: 17px;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    background: #161b22;
+}
+
+.technique-list strong {
+    color: #58a6ff;
+}
+
+.technique-list span {
+    color: #8b949e;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-list span {
+    padding: 8px 13px;
+    border: 1px solid #30363d;
+    border-radius: 999px;
+    background: #161b22;
+    color: #c9d1d9;
+    font-size: 0.9rem;
+}
+
+.project-cta {
+    text-align: center;
+}
+
+.project-cta p {
+    max-width: 700px;
+    margin: 12px auto 25px;
+    color: #8b949e;
+}
+
+@media (max-width: 900px) {
+    .project-summary-grid,
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .architecture-flow {
+        grid-template-columns: 1fr;
+    }
+
+    .flow-arrow {
+        justify-content: center;
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .workflow-list li {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .project-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

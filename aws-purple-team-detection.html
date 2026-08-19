@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="AWS Purple Team detection project featuring controlled Apache exploitation, ELK Stack telemetry, Kibana investigation, IOC analysis, and MITRE ATT&CK mapping.">
+
+    <title>AWS Purple Team Detection Project | Cyb3rZ3d</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <a href="index.html">CYB3RZ3D</a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="https://github.com/Cyb3rZ3d">GitHub</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="project-hero">
+    <div class="container">
+        <p class="eyebrow">Detection Engineering • Purple Team • Cloud Security</p>
+
+        <h1>AWS Purple Team Detection Project</h1>
+
+        <p class="project-lead">
+            A controlled AWS attack-and-detect environment connecting
+            reconnaissance and Apache vulnerability testing to centralized
+            telemetry, SIEM investigation, IOC analysis, MITRE ATT&amp;CK
+            mapping, and detection development.
+        </p>
+
+        <div class="project-actions">
+            <a class="button"
+               href="https://github.com/Cyb3rZ3d/aws-purple-team-detection-project">
+                View GitHub Repository
+            </a>
+
+            <a class="button secondary" href="projects.html">
+                All Projects
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container">
+        <div class="project-summary-grid">
+            <article class="card">
+                <h2>Project Objective</h2>
+                <p>
+                    Simulate authorized adversary activity against an Apache
+                    web server, collect the resulting Linux and web telemetry,
+                    and determine how the evidence can support repeatable
+                    defensive detections.
+                </p>
+            </article>
+
+            <article class="card">
+                <h2>Environment</h2>
+                <p>
+                    Three AWS-hosted roles were used: Kali Linux as the
+                    attacker, Ubuntu and Apache as the target, and the ELK
+                    Stack as the centralized defender and SIEM platform.
+                </p>
+            </article>
+
+            <article class="card">
+                <h2>Outcome</h2>
+                <p>
+                    The exercise connected attacker behavior to observable
+                    logs, KQL investigation, indicators of compromise, ATT&amp;CK
+                    techniques, and practical detection opportunities.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container">
+        <h2 class="section-title">Architecture and Data Flow</h2>
+
+        <div class="architecture-flow" aria-label="Project architecture">
+            <div class="flow-node">
+                <span>Attacker</span>
+                <strong>Kali Linux</strong>
+                <small>Nmap • curl</small>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">→</div>
+
+            <div class="flow-node">
+                <span>Target</span>
+                <strong>Ubuntu + Apache</strong>
+                <small>Web and system telemetry</small>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">→</div>
+
+            <div class="flow-node">
+                <span>Pipeline</span>
+                <strong>rsyslog + Logstash</strong>
+                <small>Collection and processing</small>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true">→</div>
+
+            <div class="flow-node">
+                <span>Defender</span>
+                <strong>Elasticsearch + Kibana</strong>
+                <small>Investigation and detection</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container">
+        <h2 class="section-title">Attack-to-Detection Workflow</h2>
+
+        <ol class="workflow-list">
+            <li>
+                <strong>Reconnaissance</strong>
+                <span>Identified reachable services, open ports, and the Apache attack surface using Nmap.</span>
+            </li>
+            <li>
+                <strong>Vulnerability Analysis</strong>
+                <span>Investigated Apache CVE-2021-41773 and CVE-2021-42013 within the authorized environment.</span>
+            </li>
+            <li>
+                <strong>Controlled Testing</strong>
+                <span>Generated non-destructive HTTP activity to create observable path-traversal and exploitation telemetry.</span>
+            </li>
+            <li>
+                <strong>Centralized Logging</strong>
+                <span>Forwarded Apache and Ubuntu events through rsyslog and Logstash into Elasticsearch.</span>
+            </li>
+            <li>
+                <strong>SIEM Investigation</strong>
+                <span>Used Kibana and KQL to analyze source activity, request paths, timestamps, and repeated behavior.</span>
+            </li>
+            <li>
+                <strong>Detection Development</strong>
+                <span>Translated observed behavior into IOC, ATT&amp;CK, and behavioral detection opportunities.</span>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container">
+        <div class="two-column">
+            <div>
+                <h2 class="section-title">Detection Focus</h2>
+
+                <ul class="detail-list">
+                    <li>Repeated reconnaissance from a single source</li>
+                    <li>Suspicious or encoded path-traversal sequences</li>
+                    <li>Requests targeting sensitive filesystem locations</li>
+                    <li>Reconnaissance followed by exploitation activity</li>
+                    <li>Correlation of attacker actions with target logs</li>
+                    <li>Behavior-based detection beyond single IP indicators</li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="section-title">ATT&amp;CK Mapping</h2>
+
+                <div class="technique-list">
+                    <div>
+                        <strong>T1046</strong>
+                        <span>Network Service Discovery</span>
+                    </div>
+
+                    <div>
+                        <strong>T1190</strong>
+                        <span>Exploit Public-Facing Application</span>
+                    </div>
+
+                    <div>
+                        <strong>T1059</strong>
+                        <span>Command and Scripting Interpreter, when supported by collected evidence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container">
+        <h2 class="section-title">Technologies and Skills</h2>
+
+        <div class="tag-list">
+            <span>AWS</span>
+            <span>Amazon EC2</span>
+            <span>VPC</span>
+            <span>Security Groups</span>
+            <span>Kali Linux</span>
+            <span>Ubuntu</span>
+            <span>Apache</span>
+            <span>Nmap</span>
+            <span>rsyslog</span>
+            <span>Logstash</span>
+            <span>Elasticsearch</span>
+            <span>Kibana</span>
+            <span>KQL</span>
+            <span>IOC Analysis</span>
+            <span>MITRE ATT&amp;CK</span>
+            <span>Detection Engineering</span>
+        </div>
+    </div>
+</section>
+
+<section class="project-section project-cta">
+    <div class="container">
+        <h2>Explore the Technical Documentation</h2>
+
+        <p>
+            The repository includes the full project overview, Markdown
+            architecture diagrams, attack scenario, and detection analysis.
+        </p>
+
+        <a class="button"
+           href="https://github.com/Cyb3rZ3d/aws-purple-team-detection-project">
+            Open Project Repository
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>Cyb3rZ3d Cybersecurity Portfolio</p>
+    </div>
+</footer>
+
+</body>
+
+</html>
