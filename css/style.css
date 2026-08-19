@@ -190,6 +190,10 @@ footer {
     margin-right: 0;
 }
 
+.project-actions-center {
+    justify-content: center;
+}
+
 .text-link {
     color: #58a6ff;
     text-decoration: none;
