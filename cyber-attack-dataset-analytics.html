@@ -30,7 +30,7 @@
         <p class="eyebrow">AI &amp; Machine Learning • Security Analytics • Python</p>
         <h1>Cyber Attack Dataset Analytics</h1>
         <p class="project-lead">
-            An Advanced Information Security semester project exploring a
+            An Advanced Information Security (CSEC 5327) semester project exploring a
             40,000-record cybersecurity dataset through statistical analysis,
             visualization, Random Forest classification, dense neural networks,
             and a 1D convolutional neural network.
@@ -63,6 +63,17 @@
 
 <section class="project-section">
     <div class="container">
+        <h2 class="section-title">Research Questions</h2>
+        <ol class="workflow-list research-questions">
+            <li><strong>Attack Timing</strong><span>Do attack types vary by time of day or day of the week?</span></li>
+            <li><strong>Source Signals</strong><span>Can source location or originating port help predict attack type?</span></li>
+            <li><strong>Target Platform</strong><span>Are particular browsers or operating systems targeted more frequently for specific attack types?</span></li>
+        </ol>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container">
         <h2 class="section-title">Dataset Profile</h2>
         <div class="project-summary-grid">
             <article class="card">
@@ -78,6 +89,26 @@
                 <p>13,265 records</p>
             </article>
         </div>
+    </div>
+</section>
+
+<section class="project-section">
+    <div class="container">
+        <h2 class="section-title">Recorded Experiment Results</h2>
+        <p class="section-intro">These values are transcribed from the execution output preserved in the submitted semester report.</p>
+        <div class="results-table-wrap">
+            <table class="results-table">
+                <thead>
+                    <tr><th>Model</th><th>Training</th><th>Prediction</th><th>Test accuracy</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Random Forest</td><td>4.14 s</td><td>0.20 s</td><td>33.52%</td></tr>
+                    <tr><td>Dense neural network</td><td>22.03 s</td><td>0.16 s</td><td>33%</td></tr>
+                    <tr><td>1D-CNN</td><td>10.38 s</td><td>0.17 s</td><td>33%</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="evidence-note">The recorded Random Forest report shows macro and weighted precision, recall, and F1 of approximately 0.34 on 12,000 test records. All three captured runs performed near one-third accuracy; the clearest measured distinction is training efficiency, not an accuracy advantage.</p>
     </div>
 </section>
 
@@ -115,7 +146,7 @@
                     <li>The repository preserves the original course-project scripts.</li>
                     <li>Some scripts contain hard-coded local dataset paths.</li>
                     <li>Later feature selections require alignment with the included CSV schema.</li>
-                    <li>No saved execution output is available, so no model score is claimed.</li>
+                    <li>Published metrics are transcribed from the submitted report, not newly reproduced benchmarks.</li>
                 </ul>
             </div>
         </div>
@@ -151,4 +182,3 @@
 <footer><div class="container"><p>Cyb3rZ3d Cybersecurity Portfolio</p></div></footer>
 </body>
 </html>
-
