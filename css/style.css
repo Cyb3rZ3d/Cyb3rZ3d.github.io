@@ -133,6 +133,17 @@ footer {
     align-items: stretch;
 }
 
+.home-project-grid .card {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+.home-project-grid .project-actions {
+    margin-top: auto;
+    padding-top: 22px;
+}
+
 .topic-group {
     display: flex;
     padding: 0;
