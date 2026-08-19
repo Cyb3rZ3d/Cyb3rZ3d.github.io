@@ -126,6 +126,26 @@ footer {
     color: #8b949e;
 }
 
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.topic-group {
+    padding: 0;
+}
+
+.topic-group .grid {
+    grid-template-columns: 1fr;
+}
+
+.topic-title {
+    margin-bottom: 16px;
+    color: #58a6ff;
+    font-size: 1.15rem;
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -137,7 +157,8 @@ footer {
         justify-content: center;
     }
 
-    .grid {
+    .grid,
+    .topic-grid {
         grid-template-columns: 1fr;
     }
 
