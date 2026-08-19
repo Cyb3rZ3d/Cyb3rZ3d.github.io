@@ -201,6 +201,15 @@ footer {
     color: #58a6ff !important;
 }
 
+.project-topic {
+    margin-bottom: 8px;
+    color: #58a6ff !important;
+    font-size: 0.82rem;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
 
 /* Project detail pages */
 
