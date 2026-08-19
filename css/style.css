@@ -126,18 +126,26 @@ footer {
     color: #8b949e;
 }
 
-.topic-grid {
+.project-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 28px;
+    align-items: stretch;
 }
 
 .topic-group {
+    display: flex;
     padding: 0;
+    flex-direction: column;
 }
 
 .topic-group .grid {
+    flex: 1;
     grid-template-columns: 1fr;
+}
+
+.topic-group .card {
+    height: 100%;
 }
 
 .topic-title {
@@ -158,7 +166,7 @@ footer {
     }
 
     .grid,
-    .topic-grid {
+    .project-grid {
         grid-template-columns: 1fr;
     }
 
